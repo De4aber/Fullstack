@@ -38,7 +38,7 @@ const Cappsule = ({ Cappsule }: any) => {
         <div className='cappsule_container'>
             <div className='cappsulse_Title_Wrapper'>
                 <div className='cappsulse_Title'>
-                    From: {Cappsule.senderId !== undefined ? Cappsule.senderId : 'Anonymous'}
+                    From: {Cappsule.senderUsername !== undefined ? Cappsule.senderUsername : 'Anonymous'}
                 </div>
             </div>
 
