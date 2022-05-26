@@ -12,7 +12,7 @@ const LoginPage = () => {
         console.log(username, password)
         await authStore.attemptLogin({ username: username, password: password })
         if (authStore.user) {
-            navigate("/");
+            navigate("/Cappsules");
         }
     }
 
