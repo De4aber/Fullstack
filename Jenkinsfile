@@ -10,7 +10,7 @@ pipeline {
     stages {
 	    stage('Building') {
             steps{
-                sh "echo '[API] Building...'"
+                sh "echo '[Frontend] Building...'"
                 sh "npm install"
                 sh "npm run build"
             }
@@ -23,6 +23,10 @@ pipeline {
         stage("Reset containers"){
             steps{
                 sh "docker compose down ."
+            }
+        }
+        stage("Deploy containers") {
+            steps {
                 sh "docker compose up -d --build"
             }
         }
