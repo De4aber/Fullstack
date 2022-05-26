@@ -8,7 +8,7 @@ const Cappsule = ({ Cappsule }: any) => {
     const [showMessage, setShowMessage] = useState(false);
 
     const isValidDate = () => {
-        return new Date(Cappsule.time) < new Date()
+        return new Date(Cappsule.time) < new Date(Date.now())
     }
 
     const onOpen = () => {
@@ -23,7 +23,7 @@ const Cappsule = ({ Cappsule }: any) => {
         <div className='cappsule_container'>
             <div className='cappsulse_Title_Wrapper'>
                 <div className='cappsulse_Title'>
-                    From: {Cappsule.senderId !== undefined ? Cappsule.senderId : 'Anonymous'}
+                    From: {Cappsule.senderUsername !== undefined ? Cappsule.senderUsername : 'Anonymous'}
                 </div>
             </div>
 
@@ -31,7 +31,7 @@ const Cappsule = ({ Cappsule }: any) => {
                 <div className='cappsule_TimeLeft'>
                     {!showMessage ?
                         <>
-                            Date : {new Date(Cappsule.time) > new Date() ? new Date(Cappsule.time).toLocaleDateString('da-DK') : 'Now!'}
+                            Date : {new Date(Cappsule.time) > new Date(Date.now()) ? new Date(Cappsule.time).toLocaleDateString('da-DK') : 'Now!'}
                         </>
                         :
                         <>
