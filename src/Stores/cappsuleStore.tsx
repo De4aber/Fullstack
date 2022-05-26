@@ -6,11 +6,11 @@ import authStore from "./authStore";
 export interface Cappsule {
     capsuleId: number,
     senderUsername: string,
-    message: string,
-    time: string,
-    latitude: number,
-    longitude: number,
-    photo: string,
+    message?: string,
+    time?: string,
+    latitude?: number,
+    longitude?: number,
+    photo?: string,
 }
 
 
@@ -35,7 +35,7 @@ class CappsuleStore {
                     console.log(message);
                     this.test = message;
                     this.cappsules = message;
-                    console.log(this.cappsules);
+                    console.log("saved capss = " + this.cappsules[0].message);
                 });
 
 
