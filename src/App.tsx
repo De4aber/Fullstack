@@ -1,34 +1,48 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import SocketTest from './socketTest';
-import { HubConnectionBuilder } from '@microsoft/signalr';
+import { Route, BrowserRouter as Router, Routes, useLocation, Navigate } from 'react-router-dom';
+import Navbar from './Components/shared/navbar/navbar';
+import FrontPage from './Pages/frontPage/frontPage';
+import LoginPage from './Pages/loginPage/loginPage';
+import CappsulePage from './Pages/cappsulePage/cappsulesPage';
+import authStore from './Stores/authStore';
 
+function RequireAuth({ children }: any) {
+  const location = useLocation();
+  return authStore.user !== undefined ? (
+    children
+  ) : (
+    <Navigate to="/Login" replace state={{ path: location.pathname }} />
+  );
+}
 
 function App() {
-
-
-
-  useEffect(() => {
-    localStorage.clear();
-    const hubConnection = new HubConnectionBuilder().withUrl("https://localhost:7010/friendRequestHub").withAutomaticReconnect().build();
-
-    hubConnection.start()
-    .then(result => {
-        console.log('Connected!');
-
-        hubConnection.on('load', message => {
-            console.log(message);
-            
-        });
-    })
-    .catch(e => console.log('Connection failed: ', e));
-  }, [])
-
 
   return (
     <div className="App">
       <header className="App-header">
+        <Router>
+
+          <Navbar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <FrontPage />
+              </>
+            } />
+            <Route path="/login" element={
+              <>
+                <LoginPage />
+              </>
+            } />
+            <Route path='/Cappsules' element={
+              <RequireAuth>
+                <CappsulePage />
+              </RequireAuth>
+            }>
+            </Route>
+          </Routes>
+        </Router>
       </header>
     </div>
   );

@@ -1,0 +1,139 @@
+.Navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: row;
+    z-index: 999;
+    width: 100%;
+    color: white;
+}
+
+.Navbar__Wrapper {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+}
+
+.NavbarLogo {
+    width: 150px;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavbarLogo_Link {
+    text-decoration: none;
+}
+
+.NavbarMenu {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.NavbarMenu__Links {
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 1em;
+    color: white;
+    font-size: 16px;
+}
+
+.LoggedIn_Container {
+    width: 100px;
+    background-color: transparent;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.LoggedIn_Wrapper {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    text-align: end;
+    gap: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.information {
+    flex-direction: column;
+    flex: 2;
+}
+.username {
+    width: 100%;
+    height: auto;
+}
+.Wallet_Wrapper {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    gap: 5px;
+}
+.Dropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-align: end;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.Dropdown__option {
+    width: 100%;
+    height: 30px;
+    text-align: end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px 5px 0 0;
+    transition: 0.2s;
+    justify-content: center;
+    align-items: center;
+}
+.Dropdown__option__text {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.Dropdown__option:hover {
+    background-color: rgba(#279bbb80);
+}
+
+.Dropdown__Logout {
+    width: 100%;
+    height: 30px;
+    text-align: end;
+    border-radius: 5px;
+    transition: 0.2s;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.Dropdown__option__text {
+    margin-right: 10px;
+}
+.Dropdown__Logout:hover {
+    background-color: rgba(170, 46, 46, 0.5);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}

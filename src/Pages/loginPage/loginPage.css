@@ -1,0 +1,111 @@
+.login_Container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_Wrapper {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_Component {
+    width: 40%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login_Component_Header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login_Component_HeaderWrapper {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login_Component_HeaderTitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 5px;
+    font-size: 40px;
+}
+
+.login_Component_Body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_Component_Body_Input {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login_Component_Body_InputTitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 5px;
+    font-size: 22px;
+}
+
+.login_Component_Body_InputField {
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.login_Component_Body_InputField::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.login_Component_Body_InputField:focus {
+    outline: none;
+}
+
+.Login_Button {
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background: #64c6c0;
+    border: none;
+    box-shadow: 0px 4px 14px -3px rgba(100, 198, 192, 0.5);
+    margin-bottom: 50px;
+    color: white;
+    font-size: 20px;
+}
