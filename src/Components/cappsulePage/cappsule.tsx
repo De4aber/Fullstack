@@ -8,7 +8,22 @@ const Cappsule = ({ Cappsule }: any) => {
     const [showMessage, setShowMessage] = useState(false);
 
     const isValidDate = () => {
-        return new Date(Cappsule.time) < new Date()
+        var initDate = Cappsule.time.split(' ')[0]
+        var dateParts = initDate.split("/");
+
+        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+        console.log(dateObject < new Date());
+
+        return dateObject < new Date()
+    }
+
+    const dateString = () => {
+        var initDate = Cappsule.time.split(' ')[0]
+        var dateParts = initDate.split("/");
+
+        return new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+
+    
     }
 
     const onOpen = () => {
@@ -31,7 +46,7 @@ const Cappsule = ({ Cappsule }: any) => {
                 <div className='cappsule_TimeLeft'>
                     {!showMessage ?
                         <>
-                            Date : {new Date(Cappsule.time) > new Date() ? new Date(Cappsule.time).toLocaleDateString('da-DK') : 'Now!'}
+                            Date : {dateString() > new Date() ? new Date(Cappsule.time).toLocaleDateString('da-DK') : 'Now!'}
                         </>
                         :
                         <>
