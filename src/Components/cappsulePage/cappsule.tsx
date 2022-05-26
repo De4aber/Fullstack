@@ -6,6 +6,7 @@ import './cappsule.css'
 const Cappsule = ({ Cappsule }: any) => {
 
     const [showMessage, setShowMessage] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     const isValidDate = () => {
         var initDate = Cappsule.time.split(' ')[0]
@@ -22,8 +23,6 @@ const Cappsule = ({ Cappsule }: any) => {
         var dateParts = initDate.split("/");
 
         return new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-
-    
     }
 
     const onOpen = () => {
