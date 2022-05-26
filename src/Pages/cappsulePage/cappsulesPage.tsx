@@ -24,38 +24,6 @@ const CappsulePage = () => {
                         {cappsuleStore.cappsules.map((cappsule: any) => {
                             return (
                                 <>
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
-
-                                    <Cappsule Cappsule={cappsule} />
 
                                     <Cappsule Cappsule={cappsule} />
 
