@@ -22,7 +22,12 @@ pipeline {
         }
         stage("Reset containers"){
             steps{
-                sh "docker compose down ."
+                script { 
+                    try {
+                        sh "docker compose down"
+                    }
+                    finally {}
+                }
             }
         }
         stage("Deploy containers") {
