@@ -3,7 +3,7 @@ version: "3.9"
 services:
   frontend:
     build:
-      context: "."
+      context: ""
     container_name: "frontend-container"
     ports:
       - "8092:3000"
