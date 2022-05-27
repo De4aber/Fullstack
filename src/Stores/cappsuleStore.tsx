@@ -25,9 +25,12 @@ class CappsuleStore {
 
     createHubConnection = () => {
         console.log("trying to connect");
-        this.hubConnection = new HubConnectionBuilder().withUrl("http://185.51.76.204:8091/friendRequestHub"+ '?userId=' + authStore.user?.id).withAutomaticReconnect().build();
-
+        this.hubConnection = new HubConnectionBuilder()
+            .withUrl("http://185.51.76.204:9091/friendRequestHub"+ '?userId=' + authStore.user?.id)
+            .withAutomaticReconnect()
+            .build();
         this.hubConnection.start()
+
             .then(result => {
                 console.log('Connected!');
 
@@ -38,8 +41,6 @@ class CappsuleStore {
                     console.log("saved capss = " + this.cappsules[0].message);
                 });
 
-
-                //omdan til username med userStore.getUsernameById
             })
             .catch(e => console.log('Connection failed: ', e));
 
