@@ -26,11 +26,7 @@ const Cappsule = ({ Cappsule }: any) => {
     }
 
     const onOpen = () => {
-        if (isValidDate()) {
-            setShowMessage(!showMessage);
-        } else {
-            alert("You can't open a cappsule that before time!")
-        }
+        setShowMessage(!showMessage);
     }
 
     return (
@@ -45,7 +41,7 @@ const Cappsule = ({ Cappsule }: any) => {
                 <div className='cappsule_TimeLeft'>
                     {!showMessage ?
                         <>
-                            Date : {dateString() > new Date() ? new Date(Cappsule.time).toLocaleDateString('da-DK') : 'Now!'}
+                            Date : {dateString() > new Date() ? new Date(dateString()).toLocaleDateString('da-DK') : 'Now!'}
                         </>
                         :
                         <>
