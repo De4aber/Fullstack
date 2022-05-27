@@ -38,8 +38,6 @@ class CappsuleStore {
                     console.log("saved capss = " + this.cappsules[0].message);
                 });
 
-
-                //omdan til username med userStore.getUsernameById
             })
             .catch(e => console.log('Connection failed: ', e));
 
