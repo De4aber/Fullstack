@@ -6,4 +6,4 @@ services:
       context: ""
     container_name: "frontend-container"
     ports:
-      - "8092:8092"
+      - "8092:3000"
